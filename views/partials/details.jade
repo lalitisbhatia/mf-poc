@@ -1,0 +1,48 @@
+.fd3-page-container(ng-controller="locDetailsController" ng-init="init()")
+    .fd3-section-container
+        .ms-section.row.overflow
+            .sixteen.columns
+                        .left-content
+                            //img(src="img/map.jpg")
+                            #myMap(mtgs-map style="position:relative; width:300px; height:300px;"  )
+                        .right-content
+                            .location
+                                    h3(ng-bind="sharedData.Name")
+                                    p
+                                        span(ng-bind="sharedData.Address.Address1")
+                                    p
+                                        span(ng-bind="sharedData.Address.Address2")
+                                    p
+                                        span(ng-bind="sharedData.ApproxDistance + ' miles'")
+
+                                    .ui-widget-content
+                                        .accordion
+                                            h3
+                                                p.meeting-time-title Meeting Times:
+                                            div
+                                                p.paragraph-pad
+                                                    | Please arrive 1/2 hour before the Meeting time to register.
+                                                    | Meetings usually last 45 minutes.
+                                                .meeting-info(ng-repeat="mtg in sharedData.Detail.MeetingsForDay")
+                                                    .days
+                                                        | {{mtg.DayOfWeek}}
+                                                    .time(ng-repeat="t in mtg.Meetings")
+                                                        span(ng-bind="t")
+                                                        //.divide-bar |
+                                                    .clear
+                                            h3
+                                                span.hours-operation-title(style="padding-right:10px") Hours Of Operation
+                                            div
+                                                p.paragraph-pad
+                                                    | Even if it"s not your meeting time, we"d still like to see you. Feel free to drop in at this location whenever it"s open to weigh in, buy Weight Watchers products, or just talk to a staff member.
+                                                    .operation
+                                                        div(style="clear:left" ng-repeat="mtg in sharedData.Detail.MeetingsForDay")
+                                                            .days
+                                                                | {{mtg.DayOfWeek}}
+                                                            .time
+                                                                | {{mtg.OpenHours.From}}- {{mtg.OpenHours.Till}}
+
+                                                            .clear
+                                                        .clear
+
+                        .clear

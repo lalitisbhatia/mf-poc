@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'WWText_Book_regular';
+    src: url('fonts/WWText-Book.eot');
+    src: url('fonts/WWText-Book?#iefix') format('embedded-opentype'),
+    url('fonts/WWText-Book.woff') format('woff'),
+    url('fonts/WWText-Book.ttf') format('truetype'),
+    url('fonts/WWText-Book.svg#wwdisplay_extraboldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wwdisplay_boldregular';
+    src: url('fonts/wwdisplay-bold-webfont.eot');
+    src: url('fonts/wwdisplay-bold-webfont.eot#iefix') format('embedded-opentype'),
+    url('fonts/wwdisplay-bold-webfont.woff') format('woff'),
+    url('fonts/wwdisplay-bold-webfont.ttf') format('truetype'),
+    url('fonts/wwdisplay-bold-webfont.svg#wwdisplay_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'wwdisplay_xbold';
+    src: url('fonts/wwdisplay-xbold.eot');
+    src: url('fonts/wwdisplay-xbold.eot#iefix') format('embedded-opentype'),
+    url('fonts/wwdisplay-xbold.woff') format('woff'),
+    url('fonts/wwdisplay-xbold.ttf') format('truetype'),
+    url('fonts/wwdisplay-xbold.svg#wwdisplay_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'wwdisplay_medium';
+    src: url('fonts/WWText-Medium.eot');
+    src: url('fonts/WWText-Medium.eot#iefix') format('embedded-opentype'),
+    url('fonts/WWText-Medium.woff') format('woff'),
+    url('fonts/WWText-Medium.ttf') format('truetype'),
+    url('fonts/WWText-Medium.svg#wwdisplay_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WWDisplay_Bold';
+    src: url('fonts/WWDisplay-Bold.eot');
+    src: url('fonts/WWDisplay-Bold.eot#iefix') format('embedded-opentype'),
+    url('fonts/WWDisplay-Bold.woff') format('woff'),
+    url('fonts/WWDisplay-Bold.ttf') format('truetype'),
+    url('fonts/WWDisplay-Bold.svg#wwdisplay_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'WWText_Book_regular',sans-serif;
+    font-size: 16px;
+    letter-spacing: .01em
+}
+
+
+#content {
+    width:960px;
+}
+
+#header {
+    background:#ddd;
+    width:100%;
+}
+
+
+.left-content {
+    float:left;
+    width:473px;
+    padding:5px;
+}
+
+.right-content {
+    float:left;
+    width:405px;
+}
+
+.clear {
+    clear:both
+}
+
+
+
+#content .results {
+    font-family: 'WWText_Book_regular',sans-serif;
+    font-size: 21px;
+    letter-spacing: .02em
+}
+
+.results {
+    height:56px
+}
+
+
+a.default {
+    font-family: 'WWText_Book_regular',sans-serif;
+    font-size: 12px;
+    letter-spacing: .02em
+}
+
+
+h3 {
+    font-family: 'WWDisplay_Bold',sans-serif;
+    font-size: 24px;
+    letter-spacing: .01em
+}
+
+
+a.default:link { color:#379dca; }
+a.default:visited { color:#333; }
+a.default:hover   { color:#1a7198; }
+a.default:active  { color:#379dca; }
+
+
+.number, .location {
+    float:left;
+}
+
+.number {
+    margin-right:18px;
+}
+
+.number div
+{
+    background-image: url('../img/bubble-icon.png');
+    width:24px;
+    height:32px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 5px;
+    margin-top: 10px
+}
+
+
+.meeting-time-title, .hours-operation-title {
+    padding-top:5px;
+    font-size: 14px;
+    font-weight:bold
+}
+
+
+.hours-operation-title, .meeting-time-title {
+    color:#379dca
+}
+
+
+.margin_right {
+    margin-right:50px;
+}
+
+
+
+
+.paragraph-pad {
+    padding: 10px 0;
+    font-size: 12px !important
+}
+
+
+.ui-accordion .ui-accordion-icons {
+    padding-left: 0 !important;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 0 !important
+}
+
+
+
+.ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+    position: absolute !important;
+    left: 10em !important;
+    top: 50% !important;
+    margin-top: -8px !important;
+}
+
+
+.time {
+    width:135px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+
+.meeting-info, .operation {
+    padding-top: 10px !important;
+    padding-bottom: 0 !important;
+}
+
+.meeting-info .days, .meeting-info .divide-bar, .meeting-info .time, .operation .days, .operation .divide-bar, .operation .time{
+    float:left;
+    font-size: 12px !important;
+}
+
+
+.meeting-info .days, .meeting-info .divide-bar, .meeting-info .time, .operation .days, .operation .divide-bar, .operation .time {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important
+}
+
+
+
+.meeting-info .time {
+    width:61px;
+    text-align: center;
+}
+
+
+.meeting-info .days, .operation .days {
+    width:70px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.meeting-info .divide-bar, .operation .divide-bar {
+    width:10px;
+    text-align: center;
+
+}
+
+
+.operation .time {
+    width:126px;
+    text-align: center;
+}
+
+
+.fd3 h3 {
+    font-size: 22px !important;
+    margin-top: 10px
+}
+
+
+.location {
+    width:432px;
+    padding-left: 6px !important;
+    border-bottom: 1px #cccccc solid;
+}
+
+.ui-helper-reset
+{
+    line-height:1 !important;
+}
+
+
+.row input {
+    float: none !important;
+}
+
+
+.ms .accnt-btn {
+    width: 200px !important;
+    margin: 10px 0 10px 0 !important;
+}
+
+.ms .ms-btn-blue {
+    background-color: #333 !important
+}
+
+.ms .ms-btn-blue:hover {
+    background-color: #666666 !important
+}
+
+
+
+
+.ms .ms-btn-blue.blue-bk {
+    background-color: #379dca !important;
+}
+
+
+.ms .ms-btn-blue.blue-bk:hover {
+    background-color: #1a7198 !important;
+}
+
+
+
+.fd3 p
+{
+    line-height: 1.4em
+}
+
+
+#simplemodal-container a.modalCloseImg {
+    background: url(img/close.png) no-repeat !important;
+    width: 25px;
+    height: 29px;
+    display: inline;
+    z-index: 3200;
+    position: absolute;
+    top: 12px !important;
+    right: 14px !important;
+    cursor: pointer;
+}
+
+body{
+    font: 62.5% "Trebuchet MS", sans-serif;
+    margin: 50px;
+}
+.demoHeaders {
+    margin-top: 2em;
+}
+#dialog-link {
+    padding: .4em 1em .4em 20px;
+    text-decoration: none;
+    position: relative;
+}
+#dialog-link span.ui-icon {
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: .2em;
+    top: 50%;
+    margin-top: -8px;
+}
+#icons {
+    margin: 0;
+    padding: 0;
+}
+#icons li {
+    margin: 2px;
+    position: relative;
+    padding: 4px 0;
+    cursor: pointer;
+    float: left;
+    list-style: none;
+}
+#icons span.ui-icon {
+    float: left;
+    margin: 0 4px;
+}
+.fakewindowcontain .ui-widget-overlay {
+    position: absolute;
+}
+select {
+    width: 200px;
+}
+
+#ms-ww-logo.online {
+    padding-right: 20px
+
+}
+
+
+
+#simplemodal-container {
+    min-height: 30rem !important;
+    min-width: 46.0625rem !important;
+}
+
+
+h1.zipcode {
+    font-size: 3.5rem;
+    letter-spacing: -0.01em;
+    line-height: 4.2rem;
+    margin-top: 0;
+    padding-top: 2.1875rem;
+    color: #222;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    font-family: "WWDisplay_Bold";
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.zipcode-text {
+
+    font-size: 1.75rem !important;
+    line-height: 2.1rem !important;
+    color: #333333 !important;
+    margin-bottom: 1.875rem !important;
+    padding: 1.25rem 4rem 0 4rem !important;
+    font-family: "WWText_Book_regular" !important;
+    letter-spacing: -0.01em !important;
+    font-weight: normal !important;
+    text-rendering: optimizeLegibility;
+    text-align: center !important
+
+}
+
+
+.zipcode-input {
+    width: 23.125rem !important;
+    margin: 0 auto !important;
+    display: block !important;
+    font-size: 1.75rem !important;
+    height: 5rem !important;
+    font-weight: normal !important;
+    padding-left: 1.125rem !important;
+    border-radius: 0.25rem !important;
+    -webkit-border-radius: 0.25rem ;
+}
+

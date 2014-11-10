@@ -1,0 +1,133 @@
+.fd3-page-container(ng-controller="mfController" ng-init="init()")
+    .fd3-section-container
+        .ms-section.row
+            .sixteen.columns
+                .plan-head-wrap
+                    #ms-page.ms-pag.first
+        .ms-section.row
+            .sixteen.columns
+                .accnt-head-wrap
+        .ms-section.row.overflow
+            .sixteen.columns
+                .ms-form-wrap
+                    .ms-grey-box
+                        .left-content
+                            a.default(href="#", style="margin-bottom: 15px; display:block") back to pevious page
+                            .results
+                                | We found these meetings near
+                                b
+                                | {{zipcode}}
+                                a(id="basic" href="#" ng-click="changeZip();")  change
+                                //a#modal-button(href="#")  Modal 2
+                            div(ng-repeat="loc in locations")
+                                .number
+                                    div {{$index +1}}
+                                .location
+                                    h3(ng-bind="loc.Name")
+                                    p
+                                        span(ng-bind="loc.Address.Address1")
+                                    p
+                                        span(ng-bind="loc.Address.Address2")
+                                    p
+                                        span(ng-bind="loc.ApproxDistance + ' miles'")
+                                    .accnt-btn-wrap
+                                        a.accnt-btn.ms-btn-blue.empx18b14.bule-bk(href="/mfRes/{{loc.Id}}" name="btnSearchHSEmployee", ng-click="setSharedData(loc);" value="Select" )
+                                            | Select
+
+                                    .ui-widget-content
+                                        .accordion
+                                            h3
+                                                p.meeting-time-title Meeting Times:
+                                            div
+                                                p.paragraph-pad
+                                                    | Please arrive 1/2 hour before the Meeting time to register.
+                                                    | Meetings usually last 45 minutes.
+                                                .meeting-info(ng-repeat="mtg in loc.Detail.MeetingsForDay")
+                                                    .days
+                                                        | {{mtg.DayOfWeek}}
+                                                    .time(ng-repeat="t in mtg.Meetings")
+                                                        span(ng-bind="t")
+                                                        //.divide-bar |
+                                                    .clear
+                                            h3
+                                                span.hours-operation-title(style="padding-right:10px") Hours Of Operation
+                                            div
+                                                p.paragraph-pad
+                                                    | Even if it"s not your meeting time, we"d still like to see you. Feel free to drop in at this location whenever it"s open to weigh in, buy Weight Watchers products, or just talk to a staff member.
+                                                .operation
+                                                    div(style="clear:left" ng-repeat="mtg in loc.Detail.MeetingsForDay")
+                                                        .days
+                                                            | {{mtg.DayOfWeek}}
+                                                        .time
+                                                            | {{mtg.OpenHours.From}}- {{mtg.OpenHours.Till}}
+                                                        .clear
+                                    .clear
+                                    // Temporary Modal Content Start
+                                    #basic-modal-content
+                                        h1.zipcode Join Weight Watchers
+                                        p.zipcode-text
+                                            | Enter your zipcode and learn all about what"s available in your area. You can change this zipcode later.
+                                        input.zipcode-input(type="text", placeholder="Enter Zipcode", aria-hidden="false" ng-model="zipcode")
+                                        .accnt-btn-wrap.extra-pad
+                                            input.accnt-btn.ms-btn-blue.blue-bk.empx18b14(type="submit", name="ZipSubmit", value="Check zipcode" ng-click="getMeetingLocations(zipcode,1);hideModal();")
+                                        p {{zipcode}}
+                                        // preload the images
+                                    div(style="display:none")
+                                        img(src="/MF/img/close.png", alt="")
+                                    #basic-modal-content-2
+                                        | Modal Example 2
+                                    // preload the images
+                                    div(style="display:none")
+                                        img(src="img/close.png", alt="")
+                                .clear
+                            .clear
+
+                            div(style='float:right; padding-top:5px; margin-right:20px; font-weight:bold' mtgs-paginate)
+                                a(href="" ng-click="getMeetingLocations(zipcode,page -1);incrementPage(-1);" ) {{prevText}}
+                                |  {{paginationText}}
+                                a(href="" ng-click="getMeetingLocations(zipcode,page +1);incrementPage(1);" )
+                                    | {{nextText}}
+
+                            .clear
+                        .right-content
+                            //img(src="img/map.jpg")
+                            #myMap(mtgs-map style="position:relative; width:400px; height:400px;"  )
+                        .clear
+                    .ms-section.row
+                        .sixteen.column
+                            h2.zipcode Find a meeting
+                            input.zipcode-input(type="text", placeholder="Enter Zipcode", aria-hidden="false" ng-model="zipcode")
+                            .accnt-btn-wrap.extra-pad
+                                input.accnt-btn.ms-btn-blue.blue-bk.empx18b14(type="submit", style='display:inline;' name="ZipSubmit", value="Search again" ng-click="getMeetingLocations(zipcode,1);")
+                    .clearfix
+            br
+            br
+            #divPopup(style="background-color: #DEF2FD; display: none; \
+          left: 610.5px; padding: 25px; position: absolute; top: 578px; visibility: visible;\
+          width: 339px; z-index: 102;")
+                #clients-account-container
+                    .client-accounts-wrap
+                        #divEligibleEmployees.client-list(style="margin-bottom: 30px")
+                            br
+                            br
+                            br
+                            br
+                            div
+            #footer
+                #footer-wrap
+                    #footer
+                        p.copyright
+                            | WEIGHT WATCHERS and
+                            b
+                                i PointsPlus
+                            | are the registered trademarks of Weight Watchers International, Inc. Trademarks used under license by WeightWatchers.com, Inc.
+                            | &#169; 2013 Weight Watchers International, Inc. &#169; 2013 WeightWatchers.com, Inc. All rights reserved.
+                            br
+                            a#RegisterFooter1_aprivacy(href="javascript:var popup = window.open('https://www.Devstage1.weightwatchers.com/legal/privacy.aspx','privacy', 'scrollbars=1, width=800, height=700,modal=yes,alwaysRaised=yes');if (popup) popup.focus();", role="link") Privacy
+                            a#RegisterFooter1_aterms(href="javascript:var popup = window.open('https://www.Devstage1.weightwatchers.com/legal/terms.aspx','terms', 'scrollbars=1, width=800, height=700,modal=yes,alwaysRaised=yes');if (popup) popup.focus();", role="link") Terms &#38; Conditions
+                        p.contact
+                            br
+                            | Contact us: 1-866-204-2885 or at
+                            a(href="mailto:wellnesshelp@weightwatchers.com") wellnesshelp@weightwatchers.com
+                    // footer
+                // footer-wrap

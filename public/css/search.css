@@ -1,0 +1,60 @@
+/* Custom Propriotary Typeface */
+
+.tblHeader
+{
+    font-weight:bold;
+    font-family:Arial;
+    color: #fff;
+    background-color:rgb(46, 185, 185);
+    padding-left:15px;
+    border:1px;
+
+}
+.tblUsers
+{
+    border:1px;
+    width:700px
+
+}
+.tblUsers.tr:nth-child(odd){background:#dae5f4;}
+
+#users td{
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+tbody>tr:nth-child(odd){
+    background: rgba(141, 130, 170, 0.16);
+}
+
+.t-head {
+    font-size: 13px;
+    line-height: 1.4em;
+    color: #555;
+    font-weight: 300;
+    padding-bottom: 50px;
+    text-align:center;
+}
+.sub-head {
+    font-size: 18px;
+    line-height: 1.4em;
+    color: #555;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+th{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.searchResults td{
+    padding-left:12px;
+    padding-right:12px;
+    padding-top:2px;
+    padding-bottom:2px;
+    font-size: 12px;
+}
+.aq-btn-srch {
+    height: 40px;
+    width: 60px;
+}

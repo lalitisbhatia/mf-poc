@@ -1,0 +1,163 @@
+doctype html
+html(lang="en" ng-app="mfModule")
+    head
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        link(rel='stylesheet', href='/MF/css/ww-fd3-16col.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/app.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/normalize.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/mobile-3col.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/mobile_signup.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/addnl.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/basic.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/jquery-ui.css', type='text/css', media='screen')
+        link(rel='stylesheet', href='/MF/css/Accordion_css.css', type='text/css', media='screen')
+        //script(src='/MF/js/maps.js')
+
+    body.fd3.ms
+        form#ctl00(name="ctl00", method="post", action="./HS Employee Registration_files/HS Employee Registration.html", onsubmit="javascript:return WebForm_OnSubmit();")
+
+            .fd3-page-container.topnav
+                .ms-section.row
+                    .sixteen.columns
+                        #ms-ww-logo.online
+                            img(alt='WeightWatchers Wellness logo', src='/MF/img/ww-logo.png')
+
+                    // /.navbar-collapse
+        .container
+            .row
+            .col-md-2
+
+            .col-md-10
+                div(ng-view="")
+
+
+                //script
+        //    $( "#accordion" ).accordion();
+        //    // Hover states on the static widgets
+        //    $( "#dialog-link, #icons li" ).hover(
+        //    function() {
+        //    $( this ).addClass( "ui-state-hover" );
+        //    },
+        //    function() {
+        //    $( this ).removeClass( "ui-state-hover" );
+        //    });
+        //script
+        //    // Hover states on the static widgets
+        //    $( "#accordion2" ).accordion();
+        //    // Hover states on the static widgets
+        //    $( "#accordion2 #dialog-link, #accordion2 #icons li" ).hover(
+        //    function() {
+        //    $( this ).addClass( "#accordion2 ui-state-hover" );
+        //    },
+        //    function() {
+        //    $( this ).removeClass( "#accordion2 ui-state-hover" );
+        //    });
+        //script
+        //    $( "#accordion3" ).accordion();
+        //    // Hover states on the static widgets
+        //    $( "#accordion3 #dialog-link, #accordion3 #icons li" ).hover(
+        //    function() {
+        //    $( this ).addClass( "#accordion3 ui-state-hover" );
+        //    },
+        //    function() {
+        //    $( this ).removeClass( "#accordion3 ui-state-hover" );
+        //    });
+        //script
+        //    $( "#accordion4" ).accordion();
+        //    // Hover states on the static widgets
+        //    $( "#accordion4 #dialog-link, #accordion4 #icons li" ).hover(
+        //    function() {
+        //    $( this ).addClass( "#accordion4 ui-state-hover" );
+        //    },
+        //    function() {
+        //    $( this ).removeClass( "#accordion4 ui-state-hover" );
+        //    });
+        //script
+        //    $( "#accordion5" ).accordion();
+        //    // Hover states on the static widgets
+        //    $( "#accordion5 #dialog-link, #accordion5 #icons li" ).hover(
+        //    function() {
+        //    $( this ).addClass( "#accordion5 ui-state-hover" );
+        //    },
+        //    function() {
+        //    $( this ).removeClass( "#accordion5 ui-state-hover" );
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion" ).accordion({
+        //    collapsible: true, active: false, heightStyle: "fill"
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion2" ).accordion({
+        //    collapsible: true, active: false, heightStyle: "fill"
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion3" ).accordion({
+        //    collapsible: true, active: false, heightStyle: "fill"
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion4" ).accordion({
+        //    collapsible: true, active: false, heightStyle: "fill"
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion5" ).accordion({
+        //    collapsible: true, active: false, heightStyle: "fill"
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion" ).accordion({
+        //    heightStyle: "fill",
+        //    collapsible: true
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion2" ).accordion({
+        //    heightStyle: "fill",
+        //    collapsible: true
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion3" ).accordion({
+        //    heightStyle: "fill",
+        //    collapsible: true
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion4" ).accordion({
+        //    heightStyle: "fill",
+        //    collapsible: true
+        //    });
+        //    });
+        //script
+        //    $(function() {
+        //    $( "#accordion5" ).accordion({
+        //    heightStyle: "fill",
+        //    collapsible: true
+        //    });
+        //    });
+        script(type='text/javascript', src='/MF/js/jquery.js')
+        script(type='text/javascript', src='/MF/js/jquery.simplemodal.js')
+        script(type='text/javascript', src='/MF/js/basic.js')
+        script(type='text/javascript', src='/MF/js/jquery-ui.min.js')
+        //script(type='text/javascript', src='/MF/js/accordion.js')
+
+        script(src='/js/angular.min.js')
+        script(src='/js/angular-route.min.js')
+        script(src='/js/angular-resource.min.js')
+
+        script(src='/js/app.js')
+        script(src='http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0')
+        script(src='/MF/js/mfServices.js')
+        script(src='/MF/js/mfController.js')
